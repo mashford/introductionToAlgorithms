@@ -71,6 +71,7 @@ int main() {
     showheap(arr);
     HEAPSORT(arr,(len-1));
     showheap(arr);
+    free(arr);
 
     return 0;
 }
