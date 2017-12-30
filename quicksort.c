@@ -67,6 +67,7 @@ int main() {
     TAIL_RECURSIVE_QUICKSORT(arr,1, len-1);
     //QUICKSORT(arr, 1, len-1);
     showheap(arr);
+    free(arr);
 
     return 0;
 }
