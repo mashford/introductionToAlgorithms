@@ -49,15 +49,15 @@ int main() {
     //int arr[11] = {0,16,14,10,8,7,9,3,2,4,1};
     showheap(arr_A);
     
-    for (j = 1; j <= len; j++) {
+    for (j = 1; j <= (len-1); j++) {
         *(arr_C + *(arr_A + j)) += 1;
     }
 
     for (i = 1; i <= k; i++) {
     	arr_C[i] += arr_C[i-1];
     }
-    j = len;
-    for (j = len; j >= 1; j--) {
+
+    for (j = (len-1); j >= 1; j--) {
     	arr_B[arr_C[arr_A[j]]] = arr_A[j];
     	arr_C[arr_A[j]] = arr_C[arr_A[j]] - 1;
     }
